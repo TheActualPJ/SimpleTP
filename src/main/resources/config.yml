@@ -1,0 +1,24 @@
+default-max-homes: 10
+
+teleport:
+  delay: 5
+  cancel-on-move: true
+  cancel-on-rotate: false
+  cancel-on-damage: true
+  movement-threshold: 0.1
+
+tpa:
+  request-timeout: 60
+  cooldown: 30
+
+sounds:
+  enabled: true
+  tpa-request: ENTITY_EXPERIENCE_ORB_PICKUP
+  teleport-start: BLOCK_NOTE_BLOCK_PLING
+  teleport-complete: ENTITY_ENDERMAN_TELEPORT
+  home-set: BLOCK_AMETHYST_BLOCK_CHIME
+  home-teleport: ENTITY_ENDERMAN_TELEPORT
+
+messages:
+  use-minimessage: true
+  prefix: "<aqua><bold>SimpleTP</bold></aqua> <dark_gray>»</dark_gray>"

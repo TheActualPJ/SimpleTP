@@ -1,0 +1,58 @@
+# SimpleTP Messages — MiniMessage format
+# https://docs.advntr.dev/minimessage/format.html
+
+tpa:
+  request-sent: "<prefix> <green>Teleport request sent to <white><target></white>. Expires in <white><timeout>s</white>.</green>"
+  request-received: "<prefix> <yellow><sender></yellow> <gray>wants to teleport to you.</gray> <green><click:run_command:'/tpaccept'>[Accept]</click></green> <red><click:run_command:'/tpdeny'>[Deny]</click></red>"
+  request-received-here: "<prefix> <yellow><sender></yellow> <gray>wants you to teleport to them.</gray> <green><click:run_command:'/tpaccept'>[Accept]</click></green> <red><click:run_command:'/tpdeny'>[Deny]</click></red>"
+  request-accepted: "<prefix> <green>Teleport request accepted.</green>"
+  request-accepted-notify: "<prefix> <green><player></green> <gray>accepted your teleport request.</gray>"
+  request-denied: "<prefix> <red>Teleport request denied.</red>"
+  request-denied-notify: "<prefix> <red><player></red> <gray>denied your teleport request.</gray>"
+  request-expired: "<prefix> <gray>Your teleport request to <white><target></white> has expired.</gray>"
+  request-expired-target: "<prefix> <gray>Teleport request from <white><sender></white> has expired.</gray>"
+  request-cancelled: "<prefix> <gray>Teleport request cancelled.</gray>"
+  no-request: "<prefix> <red>You have no incoming teleport request.</red>"
+  no-outgoing: "<prefix> <red>You have no outgoing teleport request.</red>"
+  already-sent: "<prefix> <red>You already have an active request. Use /tpacancel first.</red>"
+  cannot-self: "<prefix> <red>You cannot send a teleport request to yourself.</red>"
+  on-cooldown: "<prefix> <red>Please wait <white><seconds>s</white> before sending another request.</red>"
+
+teleport:
+  countdown: "<prefix> <yellow>Teleporting in <white><seconds></white> second(s)... <gray>(Don't move!)</gray></yellow>"
+  complete: "<prefix> <green>Teleported!</green>"
+  cancelled-move: "<prefix> <red>Teleport cancelled — you moved!</red>"
+  cancelled-damage: "<prefix> <red>Teleport cancelled — you took damage!</red>"
+
+admin:
+  teleported-to: "<prefix> <green>Teleported to <white><target></white>.</green>"
+  teleported-to-you: "<prefix> <green>Teleported <white><target></white> to you.</green>"
+  player-not-found: "<prefix> <red>Player not found: <white><name></white>.</red>"
+  no-permission: "<prefix> <red>You don't have permission to do that.</red>"
+
+home:
+  set: "<prefix> <green>Home <white><name></white> set!</green>"
+  deleted: "<prefix> <red>Home <white><name></white> deleted.</red>"
+  teleporting: "<prefix> <green>Teleporting to home <white><name></white>...</green>"
+  not-found: "<prefix> <red>Home <white><name></white> not found. Use /homes to see your homes.</red>"
+  already-exists: "<prefix> <red>A home named <white><name></white> already exists. Delete it first with /delhome.</red>"
+  max-reached: "<prefix> <red>You have reached your home limit (<white><max></white>). Delete a home first.</red>"
+  list-header: "<prefix> <gray>Your homes (<white><count>/<max></white>):</gray>"
+  list-entry: "  <aqua><click:run_command:'/home <name>'><name></click></aqua> <dark_gray>—</dark_gray> <gray><world> <white><x>, <y>, <z></white></gray>"
+  list-empty: "<prefix> <gray>You have no homes. Use <white>/sethome <name></white> to create one.</gray>"
+  world-not-found: "<prefix> <red>The world this home is in no longer exists.</red>"
+
+general:
+  usage: "<prefix> <red>Usage: <white><usage></white></red>"
+  player-only: "<prefix> <red>This command can only be run by a player.</red>"
+  reload: "<prefix> <green>Configuration reloaded.</green>"
+
+tpa:
+  toggle-off: "<prefix> <red>TPA requests are now <bold>disabled</bold>. Players cannot send you requests.</red>"
+  toggle-on: "<prefix> <green>TPA requests are now <bold>enabled</bold>. Players can send you requests again.</green>"
+  target-blocked: "<prefix> <red><target> has disabled TPA requests.</red>"
+
+spawn:
+  set: "<prefix> <green>Spawn set at <white><world> <x>, <y>, <z></white>.</green>"
+  welcome: "<prefix> <aqua>Welcome to the server! You've been teleported to spawn.</aqua>"
+  respawned: "<prefix> <gray>You had no bed or respawn anchor set — teleported to server spawn.</gray>"

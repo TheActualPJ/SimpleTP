@@ -1,0 +1,96 @@
+name: SimpleTP
+version: 1.0.0
+main: com.simpletp.SimpleTPPlugin
+api-version: 1.21
+description: Lightweight TPA, Home, Spawn and Admin teleport plugin
+author: YourName
+
+commands:
+  tpa:
+    description: Send a teleport request to a player
+    usage: /tpa <player>
+    permission: simpletp.tpa
+  tpahere:
+    description: Request a player to teleport to you
+    usage: /tpahere <player>
+    permission: simpletp.tpa
+  tpaccept:
+    description: Accept a teleport request
+    usage: /tpaccept
+    permission: simpletp.tpa
+  tpdeny:
+    description: Deny a teleport request
+    usage: /tpdeny
+    permission: simpletp.tpa
+  tpacancel:
+    description: Cancel your outgoing teleport request
+    usage: /tpacancel
+    permission: simpletp.tpa
+  tpatoggle:
+    description: Toggle TPA requests on or off for yourself
+    usage: /tpatoggle
+    permission: simpletp.tpa
+  tp:
+    description: Teleport to a player (admin)
+    usage: /tp <player>
+    permission: simpletp.admin
+  tp2m:
+    description: Teleport a player to you (admin)
+    usage: /tp2m <player>
+    permission: simpletp.admin
+  sethome:
+    description: Set a home
+    usage: /sethome <name>
+    permission: simpletp.home
+  home:
+    description: Teleport to a home
+    usage: /home <name>
+    permission: simpletp.home
+  delhome:
+    description: Delete a home
+    usage: /delhome <name>
+    permission: simpletp.home
+  homes:
+    description: List all your homes
+    usage: /homes
+    permission: simpletp.home
+  setnewspawn:
+    description: Set the server spawn point
+    usage: /setnewspawn
+    permission: simpletp.setspawn
+  simpletp:
+    description: Plugin management
+    usage: /simpletp reload
+    permission: simpletp.reload
+
+permissions:
+  simpletp.tpa:
+    description: Use TPA commands
+    default: true
+  simpletp.home:
+    description: Use home commands
+    default: true
+  simpletp.admin:
+    description: Use admin teleport commands
+    default: op
+  simpletp.bypass:
+    description: Bypass TPA restrictions and cooldowns
+    default: op
+  simpletp.setspawn:
+    description: Set the server spawn with /setnewspawn
+    default: op
+  simpletp.reload:
+    description: Reload plugin config
+    default: op
+  simpletp.homes.5:
+    description: Allow up to 5 homes
+    default: false
+  simpletp.homes.10:
+    description: Allow up to 10 homes
+    default: false
+  simpletp.homes.25:
+    description: Allow up to 25 homes
+    default: false
+  simpletp.homes.unlimited:
+    description: Unlimited homes
+    default: false

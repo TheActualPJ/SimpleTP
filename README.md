@@ -1,2 +1,2 @@
 # SimpleTP
-SimpleTP is a Minecraft paper plugin
+SimpleTP is a Minecraft plugin that adds homes and teleport systems, you can download it on Modrinth.
